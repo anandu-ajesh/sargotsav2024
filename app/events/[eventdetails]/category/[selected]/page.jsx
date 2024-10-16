@@ -136,14 +136,14 @@ const TailwindInfo = () => {
             </thead>
             <tbody className="divide-y divide-gray-200 bg-white dark:divide-gray-700 dark:bg-gray-900 text-center">
               {availableSchools.length > 0 && availableSchools.map((item, index) => {
-                const participatedEvent = item.eventsParticipated.find(event => event.eventName === eventTitle);
+                const participatedEvent = item.eventsParticipated.find(event => event.eventName === eventTitle && event.category === category);
                 return(
                 <tr key={item.schoolCode} >
                   <td className="px-4 py-4 text-2xl text-gray-900 dark:text-gray-100">{index + 1}</td>
                   <td className="px-4 py-4 text-2xl text-gray-900 dark:text-gray-100">{item.schoolCode}</td>
                   <td onClick={() => handleRowClick(item.schoolCode)} className="px-4 py-4 text-2xl text-blue-900 font-bold dark:text-cyan-400 cursor-pointer hover:underline">{item.schoolName}</td>
                   <td className="px-4 py-4 text-2xl text-gray-900 dark:text-gray-100">{item.totalPoints}</td>
-                  <td onClick={() => router.push(`/events/${eventdetails}/category/${category}/${item.schoolCode}/winners/${participatedEvent.category}`)} className="px-4 cursor-pointer hover:underline py-4 text-2xl text-gray-900 dark:text-gray-100">{participatedEvent ? participatedEvent.category:""}</td>
+                  <td onClick={() => router.push(`/events/${eventdetails}/category/${category}/${item.schoolCode}/winners/${category}`)} className="px-4 cursor-pointer hover:underline py-4 text-2xl text-gray-900 dark:text-gray-100">{category ? category:""}</td>
                 </tr>
               )})}
             </tbody>
