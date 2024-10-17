@@ -141,7 +141,7 @@ const TailwindInfo = () => {
                 <tr key={item.schoolCode} >
                   <td className="px-4 py-4 text-2xl text-gray-900 dark:text-gray-100">{index + 1}</td>
                   <td className="px-4 py-4 text-2xl text-gray-900 dark:text-gray-100">{item.schoolCode}</td>
-                  <td onClick={() => handleRowClick(item.schoolCode)} className="px-4 py-4 text-2xl text-blue-900 font-bold dark:text-cyan-400 cursor-pointer hover:underline">{item.schoolName}</td>
+                  <td className="px-4 py-4 text-2xl text-blue-900 font-bold dark:text-cyan-400 ">{item.schoolName}</td>
                   <td className="px-4 py-4 text-2xl text-gray-900 dark:text-gray-100">{item.totalPoints}</td>
                   <td onClick={() => router.push(`/events/${eventdetails}/category/${category}/${item.schoolCode}/winners/${category}`)} className="px-4 cursor-pointer hover:underline py-4 text-2xl text-gray-900 dark:text-gray-100">{category ? category:""}</td>
                 </tr>

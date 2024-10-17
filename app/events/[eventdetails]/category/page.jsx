@@ -35,7 +35,7 @@ function Page() {
   return (
     <div className="w-full min-h-screen bg-gray-50 flex flex-col items-center py-12 px-6">
       <h1 className="text-4xl font-bold text-gray-800 mb-10">Select a Category</h1>
-      <div className="w-full max-w-2xl flex justify-between m-4 p-6">
+      <div className="w-full l flex justify-center gap-10 m-4 p-6">
         <button
           onClick={() => router.push(`/events/${eventdetails}/category/selected?category=Category 1`)}
           className="px-8  py-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300 ease-in-out"
@@ -59,6 +59,12 @@ function Page() {
           className="px-8  py-4 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-600 transition duration-300 ease-in-out"
         >
           Category 4
+        </button>
+        <button
+          onClick={() => router.push(`/events/${eventdetails}/category/selected?category=Common`)}
+          className="px-8  py-4 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-600 transition duration-300 ease-in-out"
+        >
+          Common
         </button>
       </div>
     </div>
