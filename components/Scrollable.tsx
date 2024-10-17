@@ -53,7 +53,7 @@ const TailwindInfo = () => {
     }, []);
 
     return (
-        <div className="h-[500px] w-full m-2 overflow-auto rounded-lg border border-gray-300 dark:border-gray-300 ">
+        <div className="h-screen w-full m-2 overflow-auto rounded-lg border border-gray-300 dark:border-gray-300 ">
             <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                 <thead className="">
                     <tr className="bg-blue-900 dark:bg-gray-800 ">
